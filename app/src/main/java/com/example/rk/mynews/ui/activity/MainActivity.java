@@ -21,6 +21,7 @@ import android.widget.AbsListView;
 import android.widget.Toast;
 
 import com.example.rk.mynews.R;
+import com.example.rk.mynews.core.MyApplication;
 import com.example.rk.mynews.dao.BitmapDiskLrucache;
 import com.example.rk.mynews.model.TYPE;
 import com.example.rk.mynews.ui.adapter.MyPagerAdapter;
@@ -28,6 +29,7 @@ import com.example.rk.mynews.ui.fragment.JokeListFragment;
 import com.example.rk.mynews.ui.fragment.NewsListFragment;
 import com.example.rk.mynews.ui.fragment.gagFrament;
 import com.example.rk.mynews.ui.view.PagerSlidingTabStrip;
+import com.example.rk.mynews.utils.NetWorkUtils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -78,9 +80,7 @@ public class MainActivity extends AppCompatActivity implements
                         //Toast.makeText(MainActivity.this, "为你更新了" + msg.arg1, Toast.LENGTH_SHORT).show();
                         break;
                     case TYPE.ERROR:
-                        //sendBroadcast(new Intent("android.net.conn.CONNECTIVITY_CHANGE"));
-
-                        //Toast.makeText(MainActivity.this, "刷新失败", Toast.LENGTH_SHORT).show();
+                        if (!NetWorkUtils.isConnected(MyApplication.getContext()))Toast.makeText(MainActivity.this, "刷新失败", Toast.LENGTH_SHORT).show();
                         for (SwipeRefreshLayout swipeRefreshLayout : mSwipeRefreshLayoutList)
                             swipeRefreshLayout.setRefreshing(false);
                         break;
