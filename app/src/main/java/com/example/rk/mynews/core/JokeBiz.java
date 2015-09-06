@@ -76,8 +76,7 @@ public class JokeBiz {
                         
                         if (refrash==TYPE.FROM_NET_REPLACE){
                             arrayAdapter.replace(joke);
-							MainActivity.mHandler.sendMessage(msg);
-                        }else if (refrash==TYPE.FROM_NET_ADD){
+							                        }else if (refrash==TYPE.FROM_NET_ADD){
                             if (joke.detail.size()==0){
                                 Log.i("joke.detail.size()==0","重新加载");
                                 Random random = new Random();

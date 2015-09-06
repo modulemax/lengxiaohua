@@ -77,7 +77,10 @@ public class MainActivity extends AppCompatActivity implements
                         if (msg.arg1!=0)
                         //Toast.makeText(MainActivity.this, "为你更新了" + msg.arg1, Toast.LENGTH_SHORT).show();
                         break;
-                    case TYPE.ERROR:Toast.makeText(MainActivity.this, "刷新失败", Toast.LENGTH_SHORT).show();
+                    case TYPE.ERROR:
+                        //sendBroadcast(new Intent("android.net.conn.CONNECTIVITY_CHANGE"));
+
+                        //Toast.makeText(MainActivity.this, "刷新失败", Toast.LENGTH_SHORT).show();
                         for (SwipeRefreshLayout swipeRefreshLayout : mSwipeRefreshLayoutList)
                             swipeRefreshLayout.setRefreshing(false);
                         break;
