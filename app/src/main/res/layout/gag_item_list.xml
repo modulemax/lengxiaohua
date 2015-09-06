@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_margin="7dp">
+
+    <TextView
+        android:id="@+id/caption"
+        android:textColor="#555"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:padding="3dp"
+        android:textSize="19sp"/>
+    <FrameLayout
+        android:background="#ddd"
+        android:layout_below="@id/caption"
+        android:id="@+id/framelayout_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.example.rk.mynews.ui.view.LoadProgress
+            android:id="@+id/progress_img"
+            android:layout_gravity="center"
+            app:LoadProgresscolor="#777777"
+            app:LoadProgresssize="130"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/network_ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true" />
+    </FrameLayout>
+
+</RelativeLayout>

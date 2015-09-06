@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rk.mynews.ui.fragment.Draw_Fragment">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/imgbg"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        />
+    <LinearLayout
+        android:layout_below="@id/image"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:padding="8dp"
+            android:text="9GAG"
+            android:textSize="25sp"
+            android:id="@+id/fragment_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:padding="8dp"
+            android:text="JOKE"
+            android:textSize="25sp"
+            android:id="@+id/fragment_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:padding="8dp"
+            android:text="NEWS"
+            android:textSize="25sp"
+            android:id="@+id/fragment_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#455881">
+        <ImageButton
+            android:id="@+id/img_setting"
+            android:layout_margin="7dp"
+            android:background="@drawable/ic_set"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

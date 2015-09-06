@@ -1,0 +1,39 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#555"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--ToolBar-->
+    <include layout="@layout/tool_bar"
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <FrameLayout
+        android:id="@+id/oo"
+        android:layout_below="@id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.example.rk.mynews.ui.view.LoadProgress
+            android:id="@+id/progress_img"
+            android:layout_gravity="center"
+            app:LoadProgresscolor="#999"
+            app:LoadProgresssize="130"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+        <uk.co.senab.photoview.PhotoView
+            android:id="@+id/photoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"/>
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>

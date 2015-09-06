@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#dddddd</color>
+    <color name="toolbar_title">#444444</color>
+    <color name="red">#3f51b5</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="tabBackgroundResId">#3f51b5</color>
+    <!--toolbar-->
+    <color name="toolbar_back">#344771</color>
+    <color name="colorPrimaryDark">#233661</color>
+
+    <!--tabs颜色-->
+    <color name="pstsIndicatorColor">#3f51b5</color>
+    <color name="pstsTabBackground">#ddd</color>
+
+    <color name="progresscolor">#ccc</color>
+
+
+
+
+</resources>
