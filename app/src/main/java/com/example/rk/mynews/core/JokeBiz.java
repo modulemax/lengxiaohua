@@ -73,9 +73,10 @@ public class JokeBiz {
                         Message msg=new Message();
                         msg.arg1=joke.detail.size();
                         msg.what=TYPE.SUCCESS;
-                        MainActivity.mHandler.sendMessage(msg);
+                        
                         if (refrash==TYPE.FROM_NET_REPLACE){
                             arrayAdapter.replace(joke);
+							MainActivity.mHandler.sendMessage(msg);
                         }else if (refrash==TYPE.FROM_NET_ADD){
                             if (joke.detail.size()==0){
                                 Log.i("joke.detail.size()==0","重新加载");
@@ -86,6 +87,7 @@ public class JokeBiz {
                             arrayAdapter.addToLast(joke);
                         }
                         arrayAdapter.notifyDataSetChanged();
+						MainActivity.mHandler.sendMessage(msg);
                         new Thread(){
                             @Override
                             public void run() {
