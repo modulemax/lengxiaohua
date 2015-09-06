@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rk.mynews.ui.activity.AboutActivity"
+    android:orientation="vertical">
+    <!--ToolBar-->
+    <include layout="@layout/tool_bar"
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/view_margin"
+        android:textSize="@dimen/text_size_normal"
+        android:text="  此应用为熟悉设计规范以及开发环境所做，源代码开源"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/view_margin"
+        android:textSize="@dimen/text_size_normal"
+        android:text="  GitHub地址：https://github.com/modulemax/lengxiaohua/"
+        android:autoLink="all|web"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/view_margin"
+        android:textSize="@dimen/text_size_normal"
+        android:text="   欢迎大家Star"
+        />
+
+</LinearLayout>

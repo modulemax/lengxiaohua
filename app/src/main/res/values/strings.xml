@@ -16,4 +16,5 @@
     <string name="setting_key_clear_cache">clear_cache</string>
     <string name="setting_key_only_wifi">only_wifi</string>
     <string name="setting_key_check_update">check_update</string>
+    <string name="title_activity_about">AboutActivity</string>
 </resources>

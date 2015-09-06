@@ -46,6 +46,14 @@
             android:id="@+id/fragment_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:padding="8dp"
+            android:text="关于"
+            android:textSize="25sp"
+            android:id="@+id/fragment_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.rk.mynews.R;
+import com.example.rk.mynews.ui.activity.AboutActivity;
 import com.example.rk.mynews.ui.activity.MainActivity;
 import com.example.rk.mynews.ui.activity.SettingActivity;
 
@@ -46,9 +47,11 @@ public class Draw_Fragment extends Fragment implements View.OnClickListener {
         TextView fragment_1= (TextView) view.findViewById(R.id.fragment_1);
         TextView fragment_2= (TextView) view.findViewById(R.id.fragment_2);
         TextView fragment_3= (TextView) view.findViewById(R.id.fragment_3);
+        TextView fragment_4= (TextView) view.findViewById(R.id.fragment_4);
         fragment_1.setOnClickListener(this);
         fragment_3.setOnClickListener(this);
         fragment_2.setOnClickListener(this);
+        fragment_4.setOnClickListener(this);
         return view;
     }
 
@@ -79,6 +82,12 @@ public class Draw_Fragment extends Fragment implements View.OnClickListener {
             case R.id.fragment_2:activity.getViewPager().setCurrentItem(1);activity.getDrawerLayout().closeDrawers();
                 break;
             case R.id.fragment_3:activity.getViewPager().setCurrentItem(2);activity.getDrawerLayout().closeDrawers();
+                break;
+            case R.id.fragment_4:
+                Intent intent1 =new Intent(getActivity(), AboutActivity.class);
+                intent1.setPackage(getActivity().getPackageName());
+                activity.getDrawerLayout().closeDrawers();
+                startActivity(intent1);
                 break;
             default:break;
         }
