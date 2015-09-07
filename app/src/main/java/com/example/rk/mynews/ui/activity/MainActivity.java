@@ -25,6 +25,7 @@ import com.example.rk.mynews.core.MyApplication;
 import com.example.rk.mynews.dao.BitmapDiskLrucache;
 import com.example.rk.mynews.model.TYPE;
 import com.example.rk.mynews.ui.adapter.MyPagerAdapter;
+import com.example.rk.mynews.ui.adapter.NewsListAdapter;
 import com.example.rk.mynews.ui.fragment.JokeListFragment;
 import com.example.rk.mynews.ui.fragment.NewsListFragment;
 import com.example.rk.mynews.ui.fragment.gagFrament;
@@ -228,8 +229,16 @@ public class MainActivity extends AppCompatActivity implements
             case R.id.action_fresh:
                 for (SwipeRefreshLayout swipeRefreshLayout : mSwipeRefreshLayoutList)
                     swipeRefreshLayout.setRefreshing(true);
-                JokeListFragment jokeListFragment= (JokeListFragment) items.get(0);
-                jokeListFragment.onRefresh();
+                int currenItem=pager.getCurrentItem();
+                switch (currenItem){
+                    case 0:gagFrament mgagFrament= (gagFrament) items.get(0);
+                        mgagFrament.onRefresh();break;
+                    case 1:JokeListFragment mjokeListFragment= (JokeListFragment) items.get(1);
+                        mjokeListFragment.onRefresh();break;
+                    case 2:NewsListFragment mNewsListFragment= (NewsListFragment) items.get(2);
+                        mNewsListFragment.onRefresh();break;
+                    default:break;
+                }
                 break;
         }
 
